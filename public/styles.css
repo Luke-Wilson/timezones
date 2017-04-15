@@ -1,0 +1,16 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.time {
+  background-color: rgba(173, 227, 232, 0.7);
+  font-size: 20px;
+}
+
+.city {
+  background-color: rgba(211, 185, 230, 0.3);
+}
+.timeblock {
+  margin: 5px;
+}

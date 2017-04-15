@@ -8,7 +8,8 @@ export default class App extends React.Component {
       cities: [
         {name: "Sydney", timezone: "10"},
         {name: "Sacramento", timezone: "-7"},
-        {name: "New York", timezone: "-4"} 
+        {name: "New York", timezone: "-4"},
+        {name: "Austin", timezone: "-5"}
       ]
     };
   }

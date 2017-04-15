@@ -42,7 +42,10 @@ export default class Clock extends React.Component {
 
   render () {
     return (
-      <li className="clock">{this.state.name} = {this.state.time}</li>
+      <div className="col-md-3 timeblock">
+        <div className="time row justify-content-center">{this.state.time}</div>
+        <div className="city row justify-content-center">{this.state.name}</div>
+      </div>
     )
   }
 }
