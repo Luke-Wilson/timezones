@@ -58,4 +58,4 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.registerTask('default', ['build', 'concurrent:target']);
   grunt.registerTask('build', ['browserify']);
-}
+};

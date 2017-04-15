@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ClockList from './ClockList.jsx';
 
-
-
-ReactDOM.render(<h1>Hello!</h1>, document.getElementById('app'));
+ReactDOM.render(<ClockList />, document.getElementById('app'));
