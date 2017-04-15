@@ -1,5 +1,5 @@
 import React from 'react';
-import Clock from './clock/Clock.jsx';
+import Clock from './Clock.jsx';
 
 var cities = [
   {name: "Sydney", timezone: "10"},
