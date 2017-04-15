@@ -1,11 +1,6 @@
 import React from 'react';
 import Clock from './Clock.jsx';
 
-var cities = [
-  {name: "Sydney", timezone: "10"},
-  {name: "Sacramento", timezone: "-7"}
-];
-
 const ClockList = (props) => (
   <ul>
     {props.cities.map(city => {
