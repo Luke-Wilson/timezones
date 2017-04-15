@@ -6,9 +6,9 @@ var cities = [
   {name: "Sacramento", timezone: "-7"}
 ];
 
-const ClockList = () => (
+const ClockList = (props) => (
   <ul>
-    {cities.map(city => {
+    {props.cities.map(city => {
       return <Clock timezone={city.timezone} name={city.name} />
     })}
   </ul>
