@@ -36,7 +36,8 @@ export default class Clock extends React.Component {
         return item;
       }
     });
-    items[0] = items[0] > 23 ? items[0] - 24 : items[0];
+    items[0] = items[0] > 23 ? eval(items[0]) - 24 : items[0];
+    items[0] = items[0] < 0 ? eval(items[0]) + 12 : items[0];
     return items.join(":");
   }
 
