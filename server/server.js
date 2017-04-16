@@ -20,6 +20,10 @@ app.get('/api/city', (req, res) => {
 })
 
 app.post('/api/city', (req, res) => {
+  console.log('=== Incoming POST request ===');
+  console.log(req.body.city);
+  console.log(req.body.timezone);
+  console.log(req.body.language);
   var {city, timezone, language} = req.body;
   language = language || 'English';
   Language.findOrCreate({

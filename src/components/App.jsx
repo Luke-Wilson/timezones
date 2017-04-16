@@ -2,6 +2,7 @@ import React from 'react';
 import 'whatwg-fetch';
 
 import ClockList from './ClockList.jsx';
+import MyForm from './MyForm.jsx';
 
 export default class App extends React.Component {
   constructor() {
@@ -9,6 +10,25 @@ export default class App extends React.Component {
     this.state = {
       cities: []
     };
+  }
+
+  postCity(formData) {
+    var form = document.querySelector('form')
+    var info = {}
+    var formData = new FormData(form);
+    for (var [key,value] of formData.entries()) {
+      info[key] = value;
+    }
+
+    fetch('/api/city', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(info)
+    }).then(resp => {
+      console.log(resp);
+    });
   }
 
   getCities() {
@@ -44,7 +64,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <ClockList cities={this.state.cities} />
+      <div>
+        <ClockList cities={this.state.cities} />
+        <MyForm handleSubmit={this.postCity} />
+      </div>
     )
   }
 }
