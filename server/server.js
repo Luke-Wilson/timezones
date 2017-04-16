@@ -11,10 +11,11 @@ app.use(bodyParser.json());
 
 //request handlers
 app.get('/api/city', (req, res) => {
+  console.log('GET MESSAGE RECEIVED');
   City.findAll({})
-  .then(resp => {
-    console.log(resp);
-    res.send(resp);
+  .then(cities => {
+    // console.log(resp);
+    res.send(cities);
   });
 })
 
